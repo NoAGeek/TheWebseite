@@ -42,7 +42,7 @@ h1 {
     font-weight: bold;
     letter-spacing: 4px;
     margin: 0; /* Kein abstand am Anfang der Webseite */
-    padding: 20px; /* und dann ein wenig abstand von oben (keine Ahnung warum schaut aber so am besten aus) */<
+    padding: 20px; /* und dann ein wenig abstand von oben (keine Ahnung warum schaut aber so am besten aus) */
 }
 nav a {
     color: #ffffff;
