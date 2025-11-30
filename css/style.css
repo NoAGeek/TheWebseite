@@ -24,7 +24,7 @@ body {
    HERO SPLIT LAYOUT - Infinite Scroll Gedicht
    ============================================ */
 
-/* Titel über dem Gedicht */
+/* Titel Ã¼ber dem Gedicht */
 .manifesto-title {
     text-align: center;
     font-size: 48px;
@@ -34,25 +34,25 @@ body {
     margin-bottom: 40px;
 }
 
-/* Container für das 3-Spalten Layout */
+/* Container fÃ¼r das 3-Spalten Layout */
 .hero-split {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;           /* Feste Höhe für den sichtbaren Bereich */
+    height: 70vh;           /* Feste HÃ¶he fÃ¼r den sichtbaren Bereich */
     padding: 40px 20px;
     gap: 60px;
-    overflow: hidden;       /* Versteckt den überlaufenden Text */
+    overflow: hidden;       /* Versteckt den Ã¼berlaufenden Text */
 }
 
 /* ============================================
-   SCROLL CONTAINER - Wrapper für den scrollenden Text
+   SCROLL CONTAINER - Wrapper fÃ¼r den scrollenden Text
    ============================================ */
 .scroll-container {
     flex: 1;
     max-width: 300px;
-    height: 400px;          /* Höhe des sichtbaren Textbereichs */
-    overflow: hidden;       /* Versteckt Text außerhalb */
+    height: 400px;          /* HÃ¶he des sichtbaren Textbereichs */
+    overflow: hidden;       /* Versteckt Text auÃŸerhalb */
     position: relative;
 }
 
@@ -62,14 +62,14 @@ body {
     flex-direction: column;
 }
 
-/* Einzelner Textblock (wird dupliziert für Loop) */
+/* Einzelner Textblock (wird dupliziert fÃ¼r Loop) */
 .scroll-text {
     padding: 20px 0;
 }
 
 .scroll-text p {
     font-size: 18px;
-    line-height: 2.5;       /* Großer Zeilenabstand für Lesbarkeit */
+    line-height: 2.5;       /* GroÃŸer Zeilenabstand fÃ¼r Lesbarkeit */
     margin: 0;
     color: #f5f5f5;
     white-space: nowrap;    /* Text nicht umbrechen */
@@ -79,7 +79,7 @@ body {
    ANIMATIONEN - Infinite Scroll Loop
    ============================================ */
 
-/* Linke Seite: Text rechtsbündig, scrollt nach UNTEN */
+/* Linke Seite: Text rechtsbÃ¼ndig, scrollt nach UNTEN */
 .scroll-left {
     text-align: right;
 }
@@ -88,7 +88,7 @@ body {
     animation: scrollDown 20s linear infinite;
 }
 
-/* Rechte Seite: Text linksbündig, scrollt nach OBEN */
+/* Rechte Seite: Text linksbÃ¼ndig, scrollt nach OBEN */
 .scroll-right {
     text-align: left;
 }
@@ -114,7 +114,7 @@ body {
         transform: translateY(-50%);
     }
     100% {
-        /* Bewegt sich um 50% nach oben (zurück zum Start) */
+        /* Bewegt sich um 50% nach oben (zurÃ¼ck zum Start) */
         transform: translateY(0);
     }
 }
@@ -132,7 +132,7 @@ body {
 .hero-video {
     flex: 0 0 auto;
     max-width: 400px;
-    z-index: 1;             /* Über dem Text falls Überlappung */
+    z-index: 1;             /* Ãœber dem Text falls Ãœberlappung */
 }
 
 .hero-video video {
@@ -146,11 +146,11 @@ header {
     justify-content: space-between;
     padding: 20px;
     background-color: transparent;
-    position: absolute;  /* Schwebt über dem Video */
+    position: absolute;  /* Schwebt Ã¼ber dem Video */
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;  /* Über dem Video */
+    z-index: 10;  /* Ãœber dem Video */
 }
 h1 {
     color: #ffffff;
@@ -216,7 +216,7 @@ footer {
 }
 
 /* ============================================
-   PRODUKT CARD - Container für jedes Produkt
+   PRODUKT CARD - Container fÃ¼r jedes Produkt
    ============================================ */
 .product-card {
     text-align: center;
@@ -276,7 +276,7 @@ footer {
     opacity: 1;
 }
 /* ============================================
-   RESPONSIVE - Verschiedene Bildschirmgrößen
+   RESPONSIVE - Verschiedene BildschirmgrÃ¶ÃŸen
    ============================================ */
 
 /* LAPTOP / KLEINER DESKTOP (max 1400px) */

@@ -12,10 +12,7 @@
   - **Hover-Effekt im Shop**: Produktbilder wechseln bei Hover zwischen Vorder- und Rückseite
   - **Responsive Design**: Optimiert für Desktop, Tablet und Mobile
 
-  ## Tech-Stack
 
-  - HTML5
-  - CSS3 (Grid, Flexbox, Keyframe Animations)
 
   ## Seiten
 
@@ -25,5 +22,4 @@
   | `shop.html` | Produktübersicht mit 9 Artikeln |
 
   ## Autor
-
-  Uni-Projekt 2025
+  Mo
