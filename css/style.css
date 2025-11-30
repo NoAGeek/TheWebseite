@@ -1,27 +1,143 @@
-
+/* ============================================
+   BASIS STYLES
+   ============================================ */
 body {
     background-color: #0a0a0a;
     color: #f5f5f5;
 }
 
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
 .logo {
     width: 70px;
     height: 60px;
     margin-right: 40px;
 }
+
 .logo-section {
     display: flex;
     align-items: center;
 }
 
-.hero {
-    height: 100vh;
-    width: 100%;
+/* ============================================
+   HERO SPLIT LAYOUT - Infinite Scroll Gedicht
+   ============================================ */
+
+/* Titel über dem Gedicht */
+.manifesto-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-top: 120px;
+    margin-bottom: 40px;
 }
 
-.hero video{
-    height: 100% ;
+/* Container für das 3-Spalten Layout */
+.hero-split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;           /* Feste Höhe für den sichtbaren Bereich */
+    padding: 40px 20px;
+    gap: 60px;
+    overflow: hidden;       /* Versteckt den überlaufenden Text */
+}
+
+/* ============================================
+   SCROLL CONTAINER - Wrapper für den scrollenden Text
+   ============================================ */
+.scroll-container {
+    flex: 1;
+    max-width: 300px;
+    height: 400px;          /* Höhe des sichtbaren Textbereichs */
+    overflow: hidden;       /* Versteckt Text außerhalb */
+    position: relative;
+}
+
+/* Der eigentliche scrollende Inhalt */
+.scroll-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Einzelner Textblock (wird dupliziert für Loop) */
+.scroll-text {
+    padding: 20px 0;
+}
+
+.scroll-text p {
+    font-size: 18px;
+    line-height: 2.5;       /* Großer Zeilenabstand für Lesbarkeit */
+    margin: 0;
+    color: #f5f5f5;
+    white-space: nowrap;    /* Text nicht umbrechen */
+}
+
+/* ============================================
+   ANIMATIONEN - Infinite Scroll Loop
+   ============================================ */
+
+/* Linke Seite: Text rechtsbündig, scrollt nach UNTEN */
+.scroll-left {
+    text-align: right;
+}
+
+.scroll-left .scroll-content {
+    animation: scrollDown 20s linear infinite;
+}
+
+/* Rechte Seite: Text linksbündig, scrollt nach OBEN */
+.scroll-right {
+    text-align: left;
+}
+
+.scroll-right .scroll-content {
+    animation: scrollUp 20s linear infinite;
+}
+
+/* Keyframes: Nach unten scrollen */
+@keyframes scrollDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        /* Bewegt sich um 50% (eine Kopie) nach unten, dann Reset */
+        transform: translateY(-50%);
+    }
+}
+
+/* Keyframes: Nach oben scrollen */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        /* Bewegt sich um 50% nach oben (zurück zum Start) */
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   HOVER EFFEKT - Animation pausiert bei Hover
+   ============================================ */
+.scroll-container:hover .scroll-content {
+    animation-play-state: paused;
+}
+
+/* ============================================
+   VIDEO - Bleibt statisch in der Mitte
+   ============================================ */
+.hero-video {
+    flex: 0 0 auto;
+    max-width: 400px;
+    z-index: 1;             /* Über dem Text falls Überlappung */
+}
+
+.hero-video video {
     width: 100%;
+    height: auto;
     object-fit: contain;
 }
 header {
@@ -41,85 +157,251 @@ h1 {
     font-size: 48px;
     font-weight: bold;
     letter-spacing: 4px;
-    margin: 0; /* Kein abstand am Anfang der Webseite */
-    padding: 20px; /* und dann ein wenig abstand von oben (keine Ahnung warum schaut aber so am besten aus) */
+    margin: 0;
+    padding: 20px;
 }
+
 nav a {
     color: #ffffff;
-    text-decoration: none; /*Clean text ohne Strich */
+    text-decoration: none;
     font-size: 16px;
 }
+
 nav a:hover {
     color: #5d5a5a;
 }
+
+/* Alter Manifesto Style - wird nicht mehr verwendet */
 .manifesto {
     padding: 100px 40px;
     text-align: center;
     max-width: 900px;
-    margin: 0 auto; /* Zentriert die Section horizontal */
+    margin: 0 auto;
 }
+
 .manifesto h2 {
     font-size: 48px;
     font-weight: bold;
     letter-spacing: 4px;
     margin-bottom: 40px;
 }
+
 .manifesto p {
     font-size: 18px;
-    line-height: 1.8;  /* Mehr Zeilenabstand besser lesbar */
+    line-height: 1.8;
     color: #f5f5f5;
 }
- /* SHOP-STYLE */
-.products {
-    display: grid; /*Gitter*/
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding: 60px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666666;
+    font-size: 12px;
+    letter-spacing: 2px;
 }
+
+/* ============================================
+   SHOP-STYLE - Minimalistisches Produkt Grid
+   ============================================ */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 420px);
+    justify-content: center;
+    gap: 30px;
+    padding: 120px 20px 60px 20px;
+}
+
+/* ============================================
+   PRODUKT CARD - Container für jedes Produkt
+   ============================================ */
+.product-card {
+    text-align: center;
+}
+
+.product-card h3 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 15px 0 5px 0;
+    color: #ffffff;
+}
+
+.product-card .price {
+    font-size: 14px;
+    color: #888888;
+    margin: 0;
+}
+
+/* ============================================
+   PRODUKT BILD - Front/Back Hover Effekt
+   ============================================ */
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.4s ease;
+}
+
+.product-image .front {
+    opacity: 1;
+}
+
+.product-image .back {
+    opacity: 0;
+}
+
+.product-image:hover .front {
+    opacity: 0;
+}
+
+.product-image:hover .back {
+    opacity: 1;
+}
+/* ============================================
+   RESPONSIVE - Verschiedene Bildschirmgrößen
+   ============================================ */
+
+/* LAPTOP / KLEINER DESKTOP (max 1400px) */
+@media (max-width: 1400px) {
+    .products {
+        grid-template-columns: repeat(3, 350px);
+    }
+    .product-image {
+        height: 420px;
+    }
+}
+
+/* TABLET LANDSCAPE (max 1200px) */
+@media (max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 280px);
+        gap: 20px;
+    }
+    .product-image {
+        height: 350px;
+    }
+}
+
+/* TABLET PORTRAIT (max 992px) */
 @media (max-width: 992px) {
     .products {
-        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-columns: repeat(2, 300px);
+        gap: 25px;
+    }
+    .product-image {
+        height: 380px;
     }
     h1 {
         font-size: 36px;
     }
 }
 
+/* GROSSES HANDY / KLEINES TABLET (max 768px) */
 @media (max-width: 768px) {
     .products {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 180px);
+        gap: 15px;
+        padding: 100px 15px 40px 15px;
+    }
+    .product-image {
+        height: 220px;
+    }
+    .product-card h3 {
+        font-size: 12px;
+    }
+    .product-card .price {
+        font-size: 12px;
     }
     h1 {
         font-size: 28px;
         letter-spacing: 2px;
     }
-    .manifesto {
-        padding: 60px 20px;
+
+    /* Scroll-Gedicht Anpassungen */
+    .hero-split {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 20px;
     }
-    .manifesto h2 {
+    .scroll-container {
+        max-width: 100%;
+        height: 150px;
+    }
+    .scroll-left,
+    .scroll-right {
+        text-align: center;
+    }
+    .scroll-text p {
+        font-size: 14px;
+        line-height: 2;
+    }
+    .hero-video {
+        max-width: 280px;
+        order: -1;
+    }
+    .manifesto-title {
         font-size: 32px;
-    }
-    .manifesto p {
-        font-size: 16px;
+        margin-top: 100px;
     }
 }
-@media (max-width: 600px) {
+
+/* HANDY (max 480px) */
+@media (max-width: 480px) {
     .products {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 160px);
+        gap: 10px;
+        padding: 90px 10px 30px 10px;
+    }
+    .product-image {
+        height: 200px;
+    }
+    .product-card h3 {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .product-card .price {
+        font-size: 10px;
     }
     h1 {
-        font-size: 28px;
-        letter-spacing: 2px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding: 10px;
     }
-    .manifesto {
-        padding: 60px 20px;
+    .logo {
+        width: 50px;
+        height: 40px;
+        margin-right: 15px;
     }
-    .manifesto h2 {
-        font-size: 32px;
+    nav a {
+        font-size: 12px;
     }
-    .manifesto p {
-        font-size: 16px;
+    .manifesto-title {
+        font-size: 24px;
+        margin-top: 80px;
+    }
+    .scroll-text p {
+        font-size: 12px;
+    }
+    .hero-video {
+        max-width: 200px;
     }
 }

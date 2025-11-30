@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>URBAN VOID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN VOID - Shop</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,27 +13,104 @@
         <h1>URBAN VOID</h1>
     </div>
 
-
-
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="shop.html">Shop</a>
+    </nav>
 </header>
 <main>
+    <!-- ============================================
+         SHOP: Alle Produkte mit Hover Front/Back
+         - Bei Hover wechselt das Bild zur Rückseite
+         - Minimalistisches Grid-Layout
+    ============================================ -->
     <section class="products">
+
+        <!-- T-SHIRTS -->
         <article class="product-card">
-            <img src="images/clothing/Shirt-Black-Front.jpeg" alt="Black Shirt with white Wire Heart">
-            <h3>BARBED HEART TEE BLACK</h3>
+            <div class="product-image">
+                <img src="images/clothing/Shirt-Black-Front.jpeg" alt="Tee Black Front" class="front">
+                <img src="images/clothing/Shirt-Black-Back.png" alt="Tee Black Back" class="back">
+            </div>
+            <h3>TEE BLACK</h3>
             <p class="price">€49</p>
         </article>
 
         <article class="product-card">
-            <img src="images/clothing/Shirt-White-Front.jpeg" alt="White Shirt with black wire Heart">
-            <h3>BARBED HEART TEE WHITE</h3>
+            <div class="product-image">
+                <img src="images/clothing/Shirt-White-Front.jpeg" alt="Tee White Front" class="front">
+                <img src="images/clothing/Shirt-White-Back.png" alt="Tee White Back" class="back">
+            </div>
+            <h3>TEE WHITE</h3>
             <p class="price">€49</p>
         </article>
 
+        <!-- HOODIES -->
         <article class="product-card">
-            <img src="images/clothing/hoodie_black_front.jpeg" alt="Black Hoodie with White wire Heart">
-            <h3>BARBED HEART HOODIE BLACK</h3>
+            <div class="product-image">
+                <img src="images/clothing/hoodie_black_front.jpeg" alt="Hoodie Black Front" class="front">
+                <img src="images/clothing/hoodie_black_back.png" alt="Hoodie Black Back" class="back">
+            </div>
+            <h3>HOODIE BLACK</h3>
             <p class="price">€89</p>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/clothing/hoodie_white_front.png" alt="Hoodie White Front" class="front">
+                <img src="images/clothing/hoodie_white_back.png" alt="Hoodie White Back" class="back">
+            </div>
+            <h3>HOODIE WHITE</h3>
+            <p class="price">€89</p>
+        </article>
+
+        <!-- LONGSLEEVES -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/clothing/longsleve_black_front.png" alt="Longsleeve Black Front" class="front">
+                <img src="images/clothing/longsleve_black_back.png" alt="Longsleeve Black Back" class="back">
+            </div>
+            <h3>LONGSLEEVE BLACK</h3>
+            <p class="price">€59</p>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/clothing/longsleve_white_front.png" alt="Longsleeve White Front" class="front">
+                <img src="images/clothing/longsleve_white_back.png" alt="Longsleeve White Back" class="back">
+            </div>
+            <h3>LONGSLEEVE WHITE</h3>
+            <p class="price">€59</p>
+        </article>
+
+        <!-- LIMITED EDITION -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/clothing/limited_1_front.png" alt="Limited Edition Front" class="front">
+                <img src="images/clothing/limited_1_back.png" alt="Limited Edition Back" class="back">
+            </div>
+            <h3>LIMITED EDITION</h3>
+            <p class="price">€99</p>
+        </article>
+
+        <!-- HOSE (Front + Side) -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/clothing/hose_front.png" alt="Hose Front" class="front">
+                <img src="images/clothing/hose_side.png" alt="Hose Side" class="back">
+            </div>
+            <h3>PANTS</h3>
+            <p class="price">€79</p>
+        </article>
+
+        <!-- CAP (Front + Side) -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/clothing/cape_front.png" alt="Cap Front" class="front">
+                <img src="images/clothing/cap_side.png" alt="Cap Side" class="back">
+            </div>
+            <h3>CAP</h3>
+            <p class="price">€35</p>
         </article>
 
     </section>
@@ -40,7 +118,7 @@
 </main>
 
 <footer>
-
+    <p>© 2025 URBAN VOID</p>
 </footer>
 
 </body>
