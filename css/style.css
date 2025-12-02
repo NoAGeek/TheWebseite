@@ -405,3 +405,46 @@ footer {
         max-width: 200px;
     }
 }
+/* ============================================
+     ABOUT PAGE
+     ============================================ */
+.about-hero {
+    text-align: center;
+    padding: 150px 40px 60px 40px;
+}
+
+.about-hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.about-hero .tagline {
+    font-size: 16px;
+    color: #888888;
+    letter-spacing: 2px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 80px 20px;
+}
+
+.about-block {
+    margin-bottom: 60px;
+}
+
+.about-block h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-block p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cccccc;
+}
